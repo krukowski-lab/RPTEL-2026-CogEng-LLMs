@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: LLM_labeller
+    network_mode: host
+    environment:
+      PYTHONUNBUFFERED: "1"
+      DATABASE_URL: <MONGODB DB NAME URL>
+      DATABASE: <MONGODB DB NAME NAME>
+      PROVIDER: deepinfra
+      MODELS: '["meta-llama/Meta-Llama-3.1-8B-Instruct","google/gemma-3-4b-it"]'
+      PROJECTS: '["Exoplanet Explorers","r/askastronomy","Galaxy Zoo"]'
+      API_KEY_DEEPINFRA: <API KEY>
+      API_KEY_OPENAI: <API KEY>
+      API_KEY_ANTHROPIC: <API KEY>
+      API_KEY_TOGETHER: <API KEY>
+      API_KEY_ACADEMICCLOUD: <API KEY>
+      API_KEY_DEEPSEEK: <API KEY>
+      SEMAPHORE: 200
+    volumes:
+      - .:/app
+    restart: always
+    command: ["python", "main.py"]
