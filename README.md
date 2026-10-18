@@ -1,4 +1,4 @@
-# LLM-Based ICAP Comment Classifier
+# Repository for "The potential of large language models for the assessment of cognitive engagement in informal online communities"
 
 Associated GitHub repository for the RPTEL article "The potential of large language models for the assessment of cognitive engagement in informal online communities" ([doi: 10.58459/rptel.2027.22034](https://doi.org/10.58459/rptel.2027.22034)).
 
